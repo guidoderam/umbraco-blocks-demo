@@ -1,0 +1,9 @@
+﻿@using UmbracoBlocksDemo.Helpers
+@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+<div class="row block">
+    @{
+        var cardsContainerBlock = new CardsContainerBlock(Model);
+        Html.RenderBlocks(cardsContainerBlock.Cards);
+    }
+</div>

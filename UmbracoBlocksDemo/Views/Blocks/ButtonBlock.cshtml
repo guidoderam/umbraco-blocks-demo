@@ -1,0 +1,7 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+@{
+    var buttonBlock = new ButtonBlock(Model);
+}
+
+<a class="btn btn-@buttonBlock.ButtonStyle.ToLowerInvariant() btn-lg block" href="@buttonBlock.Page.Url()">@buttonBlock.Text!</a>

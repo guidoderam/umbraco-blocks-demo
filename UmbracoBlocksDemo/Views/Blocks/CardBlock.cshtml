@@ -1,0 +1,24 @@
+﻿@using UmbracoBlocksDemo.Helpers
+@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+@{
+    var cardBlock = new CardBlock(Model);
+}
+
+<div class="col-md-4 mb-4 block">
+    <div class="card h-100">
+        <div class="card-body">
+            <h2 class="card-title">@cardBlock.Title</h2>
+            @cardBlock.Body
+        </div>
+        @if (cardBlock.ButtonArea != null && cardBlock.ButtonArea.Any())
+        {
+            <div class="card-footer">
+                @{
+                    Html.RenderBlocks(cardBlock.ButtonArea);
+                }
+            </div>
+        }
+
+    </div>
+</div>

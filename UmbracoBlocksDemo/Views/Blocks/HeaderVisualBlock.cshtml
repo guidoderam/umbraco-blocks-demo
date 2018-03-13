@@ -1,0 +1,21 @@
+﻿@using UmbracoBlocksDemo.Helpers
+@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+@{
+    var headerVisualBlock = new HeaderVisualBlock(Model);
+}
+<div class="row my-4 block">
+    <div class="col-lg-8">
+        <img class="img-fluid rounded" src="http://placehold.it/900x400" alt="">
+    </div>
+    <!-- /.col-lg-8 -->
+    <div class="col-lg-4">
+        <h1>@headerVisualBlock.Title</h1>
+        @headerVisualBlock.Body
+        @{
+            Html.RenderBlocks(headerVisualBlock.CallToAction);
+        }
+    </div>
+    <!-- /.col-md-4 -->
+</div>
+<!-- /.row -->

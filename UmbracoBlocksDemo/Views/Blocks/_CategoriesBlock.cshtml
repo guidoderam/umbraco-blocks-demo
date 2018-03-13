@@ -1,0 +1,20 @@
+﻿@model UmbracoBlocksDemo.Models.ViewModels.CategoriesBlockViewModel
+
+<!-- Categories Widget -->
+<div class="card my-4 block">
+    <h5 class="card-header">@Model.CurrentBlock.Title</h5>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="list-unstyled mb-0">
+                    @foreach (var category in Model.Categories)
+                    {
+                        <li>
+                            <a href="#">@category</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

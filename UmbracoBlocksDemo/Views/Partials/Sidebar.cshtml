@@ -1,0 +1,9 @@
+﻿@using UmbracoBlocksDemo.Helpers
+@model Sidebar
+
+@{
+    //Make recursive
+    IEnumerable<IPublishedContent> blocks = Model.SidebarContentArea.Any() ? Model.SidebarContentArea : new Sidebar(Model.Parent).SidebarContentArea;
+
+    Html.RenderBlocks(blocks);
+}

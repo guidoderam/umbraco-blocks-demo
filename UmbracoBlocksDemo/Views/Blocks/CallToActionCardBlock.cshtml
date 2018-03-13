@@ -1,0 +1,12 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+@{
+    var callToActionCardBlock = new CallToActionCardBlock(Model);
+}
+
+<!-- Call to Action Well -->
+<div class="card text-white bg-secondary my-4 text-center block">
+    <div class="card-body text-white m-0">
+        @callToActionCardBlock.Body
+    </div>
+</div>

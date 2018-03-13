@@ -1,0 +1,13 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+@{
+    var sideWidgetBlock = new SideWidgetBlock(Model);
+}
+
+<!-- Side Widget -->
+<div class="card my-4 block">
+    <h5 class="card-header">@sideWidgetBlock.Title</h5>
+    <div class="card-body">
+        @sideWidgetBlock.Body
+    </div>
+</div>

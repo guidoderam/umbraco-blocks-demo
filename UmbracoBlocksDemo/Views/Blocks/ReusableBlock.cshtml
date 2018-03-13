@@ -1,0 +1,9 @@
+﻿@using UmbracoBlocksDemo.Helpers
+@inherits Umbraco.Web.Mvc.UmbracoViewPage
+
+<div class="">
+@{
+    var blocks = new ReusableBlock(Model);
+    Html.RenderBlocks(blocks.ContentArea);
+}
+</div>

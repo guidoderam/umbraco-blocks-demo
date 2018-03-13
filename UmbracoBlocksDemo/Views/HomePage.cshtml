@@ -1,0 +1,23 @@
+﻿@using UmbracoBlocksDemo.Helpers
+@inherits UmbracoTemplatePage<HomePage>
+@{
+	Layout = "Master.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <!-- Blog Entries Column -->
+        <div class="col-md-8 content-area">
+            @{
+                Html.RenderBlocks(Model.Content.MainContentArea);
+            }
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4 content-area">
+            @Html.CachedPartial("Sidebar", new Sidebar(Model.Content), 86400000, cacheByPage: true)
+        </div>
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
